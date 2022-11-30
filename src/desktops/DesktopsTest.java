@@ -60,14 +60,9 @@ public class DesktopsTest extends Utilities {
         //Click on “Add to Cart” button
         clickOnElement(By.xpath("//button[@id='button-cart']"));
 
-        //Verify the Message “Success: You have added HP LP3065 to your shopping cart!”
-       // verifyText(By.xpath("//body/div[@id='product-product']/div[1]"),"Success: You have added HP LP3065 to your shopping cart!");
-
         //Click on link “shopping cart” display into success message
         clickOnElement(By.xpath("//span[@id='cart-total']"));
-
-        //Verify the text "Shopping Cart"
-
+        
         //Verify the Product name "HP LP3065"
         verifyText(By.xpath("//tbody/tr[1]/td[2]/a[1]"), "HP LP3065");
 
@@ -84,6 +79,6 @@ public class DesktopsTest extends Utilities {
     }
     @After
     public void tearDown() {
-        //closeBrowser();
+        closeBrowser();
     }
 }
